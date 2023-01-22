@@ -1,13 +1,6 @@
 import { mouse, left, right, up, down } from '@nut-tree/nut-js';
 import { Duplex } from 'stream';
-
-enum Direction {
-  LEFT = 'mouse_left',
-  RIGHT = 'mouse_right',
-  UP = 'mouse_up',
-  DOWN = 'mouse_down',
-  CURRENT_POSITION = 'mouse_position',
-}
+import { Direction } from '../model/models';
 
 export async function moveMouse(direction: string, way: number, duplex: Duplex): Promise<void> {
   switch (direction) {
