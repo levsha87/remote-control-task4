@@ -104,6 +104,9 @@
   "exclude": ["node_modules"],
   "lib": ["ESNext"],
   "ts-node": {
-    "esm": true
+    "esm": true,
+    "compilerOptions": {
+      "module": "CommonJS",
+    }
   }
 }
