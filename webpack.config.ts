@@ -29,6 +29,12 @@ const config: webpack.Configuration = {
     ],
   },
 
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.browser': 'true',
+    }),
+  ],
+
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
